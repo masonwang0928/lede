@@ -10,9 +10,9 @@ name: OpenWrt-CI
 on:
   schedule:
     - cron: 0 20 * * *
-  push:
-    branches: 
-      - master
+  # push:
+  #   branches: 
+  #     - master
   release:
     types: [published]
 
@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@master
         with:
           ref: master
 
